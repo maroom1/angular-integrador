@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { RegistrarEmpleadoComponent } from './components/registrar-empleado/registrar-empleado.component';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,9 @@ import { RegistrarEmpleadoComponent } from './components/registrar-empleado/regi
     RegistrarEmpleadoComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

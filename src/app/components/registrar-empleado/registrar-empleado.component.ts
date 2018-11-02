@@ -20,8 +20,8 @@ export class RegistrarEmpleadoComponent implements OnInit {
       'password': new FormControl('', [Validators.required]),
     });
 
-    console.log(this.formulario );
-    
+   
+
   }
 
   ngOnInit() {

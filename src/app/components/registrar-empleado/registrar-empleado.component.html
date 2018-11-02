@@ -4,27 +4,37 @@
 
     <h2 class="ui dividing header">Nuevo Empleado</h2>
 
-    <div class="field" [ngClass]="{'error': formulario.controls['nombres'].errors && formulario.controls['nombres'].touched }">
+    <div class="ui fluid icon input pad" [ngClass]="{'error': formulario.controls['nombres'].errors && formulario.controls['nombres'].touched }">
+      <i class="icon" [ngClass]="{'thumbs up': formulario.controls['nombres'].valid}"></i>
       <input formControlName="nombres" type="text" name="nombres" placeholder="Nombres">
     </div>
 
-    <div class="field" [ngClass]="{'error': formulario.controls['apellidos'].errors && formulario.controls['apellidos'].touched }">
+    <div class="ui fluid icon input pad" [ngClass]="{'error': formulario.controls['apellidos'].errors && formulario.controls['apellidos'].touched }">
+        <i class="icon" [ngClass]="{'thumbs up': formulario.controls['apellidos'].valid}"></i>
+
       <input formControlName="apellidos" type="text" name="apellidos" placeholder="Apellidos">
     </div>
 
-    <div class="field" [ngClass]="{'error': formulario.controls['direccion'].errors && formulario.controls['direccion'].touched }">
+    <div class="ui fluid icon input pad" [ngClass]="{'error': formulario.controls['direccion'].errors && formulario.controls['direccion'].touched }" >
+        <i class="icon" [ngClass]="{'thumbs up': formulario.controls['direccion'].valid}"></i>
+
       <input formControlName="direccion" type="text" name="direccion" placeholder="Dirección">
+
     </div>
 
-    <div class="field" [ngClass]="{'error': formulario.controls['email'].errors && formulario.controls['email'].touched }">
+    <div class="ui fluid icon input pad" [ngClass]="{'error': formulario.controls['email'].errors && formulario.controls['email'].touched }">
+        <i class="icon" [ngClass]="{'thumbs up': formulario.controls['email'].valid}"></i>
+
       <input formControlName="email" type="text" name="email" placeholder="Email">
     </div>
 
-    <div class="field" [ngClass]="{'error': formulario.controls['password'].errors && formulario.controls['password'].touched }">
+    <div class="ui fluid icon input pad" [ngClass]="{'error': formulario.controls['password'].errors && formulario.controls['password'].touched }">
+        <i class="icon" [ngClass]="{'thumbs up': formulario.controls['password'].valid}"></i>
+
       <input formControlName="password" type="password" name="password" placeholder="Contraseña">
     </div>
 
-    <button class="fluid ui button primary" type="submit">Registrar</button>
+    <button class="ui button primary" type="submit">Registrar</button>
 
     <!-- Mensajes de errores -->
     <div class="ui message" *ngIf="onSubmit && formulario.invalid">
